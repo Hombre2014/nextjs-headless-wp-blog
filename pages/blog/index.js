@@ -1,7 +1,7 @@
 export default function BlogHome() {
   return (
     <div>
-      <h1>This is Blog index page</h1>
+      <h1>My Next JS headless WordPress Blog</h1>
     </div>
   )
 };
