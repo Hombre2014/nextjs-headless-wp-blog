@@ -29,7 +29,7 @@ export default function BlogHome({ allPosts }) {
           <SiteHeader className="z-10 relative" />
         </div>
         <h1 className='text-6xl text-center text-slate-100 relative z-10 py-8'>BLOG</h1>
-        <p className='relative text-2xl z-10 text-center' >Read our latest articles</p>
+        <p className='relative text-2xl z-10 text-center text-slate-100'>Read our latest articles</p>
       </div>
       <main>
         <section className='container mx-auto lg:max-w-5xl posts-list mt-4'>
