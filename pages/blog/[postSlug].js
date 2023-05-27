@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
-import { getSinglePost, getPostSlugs } from '../../lib/posts';
+import { getSinglePost, getPostSlugs } from '@/lib/posts';
+import Date from '@/components/Date';
 
 export async function getStaticProps({ params }) {
   const postData = await getSinglePost(params.postSlug);
@@ -50,6 +51,9 @@ export default function Post({ postData, featureImageUrl }) {
           <div className='absolute inset-0 bg-slate-900 opacity-40'></div>
           <div className='container h-full flex flex-col justify-center lg:max-w-4xl mx-auto'>
             <h1 className='text-6xl text-center relative z-10 py-8 mt-12 text-slate-100'>{postData.title}</h1>
+            <div className='text-slate-100 pb-4 z-10'>
+              Posted by Yuriy, last updated on <span className='text-yellow-400'><Date dateString={postData.modified} /></span>
+            </div>
             <div dangerouslySetInnerHTML={{
               __html: postData.excerpt
             }} className='relative z-10 text-left text-slate-200 text-2xl pl-4 border-l-4 border-lime-200' />

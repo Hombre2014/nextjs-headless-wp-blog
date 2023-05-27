@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .post-content p {
+    @apply pb-4 text-lg;
+  }
+
+  .post-content a {
+    @apply underline text-blue-400 hover:text-blue-600;
+  }
+
+  .post-content figure {
+    @apply pb-8;
+  }
+
+  .post-content figcaption {
+    @apply text-sm text-center text-gray-500;
+  }
+
+  .post-content h2 {
+    @apply text-2xl font-bold py-4;
+  }
+}
